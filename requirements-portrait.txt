@@ -1,0 +1,16 @@
+aiohttp>=3.12,<4
+glfw>=2.8,<3
+imageio-ffmpeg==0.6.0
+kaldi-native-fbank==1.23.0
+mediapipe==1.2.2
+numpy>=2,<3
+onnxruntime==1.31.1
+opencv-python==5.0.0.93
+Pillow>=11,<13
+PyGLM>=2.8,<3
+PyOpenGL>=3.1.9,<4
+PyYAML>=6,<7
+pyvirtualcam==0.15.0
+scikit-learn>=1.6,<2
+scipy>=1.15,<2
+tqdm>=4.67,<5

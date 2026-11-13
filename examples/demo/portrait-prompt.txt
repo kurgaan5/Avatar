@@ -1,0 +1,3 @@
+Generated with the built-in ImageGen tool, with no reference image.
+
+Generate a completely fictional adult woman for a reusable local avatar test fixture, no reference photos or existing identity. Photorealistic eye-level webcam still, landscape 16:9 composition. Short dark curly hair, medium brown skin, simple muted blue crew-neck shirt. Both eyes clearly open, facing camera straight on, relaxed closed lips, no smile, neutral expression. Center the nose in the image, whole head, neck, and both shoulders in frame, eyes 39 percent of frame height and top of hair at 12 percent. Plain matte light grey background, even soft frontal light. Sharp facial detail, no glasses, no jewelry, no logos, no text. Use as technical face tracking input.

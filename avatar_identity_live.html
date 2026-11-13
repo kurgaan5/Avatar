@@ -1,0 +1,15 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Аватар для Zoom</title><style>
+:root{color-scheme:dark;font:17px/1.5 system-ui;background:#151b20;color:#eaf0f5}body{max-width:960px;margin:30px auto;padding:0 24px}h1{font-size:32px;margin-bottom:8px}p{color:#c3cdd6}#preview{width:100%;max-width:560px;display:block;background:#090c0f;border-radius:12px}button,select{font:inherit;padding:10px 15px;border-radius:8px;border:1px solid #516678;background:#283642;color:#fff}button{cursor:pointer}button:disabled{opacity:.65;cursor:default}.controls{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}label{display:block;margin:14px 0}#state{padding:14px;background:#26313a;border-radius:8px}#state.recording{border-left:5px solid #61d9a0}#signal{display:flex;align-items:center;gap:12px}meter{width:180px;height:18px}a{color:#99ceff}details{margin:20px 0}code{overflow-wrap:anywhere}#engine{position:absolute;left:-9999px;width:320px;height:240px}small{color:#aab8c4}
+</style><body><h1>Ваш аватар в Zoom</h1><p>Аватар двигается самостоятельно. Включите микрофон, чтобы он говорил вашим голосом. Изображение поступает в виртуальную камеру.</p>
+<canvas id="preview" width="720" height="720" aria-label="Предпросмотр аватара"></canvas>
+<div class="controls"><button id="mic" disabled>Включить микрофон</button><button id="stop" disabled>Выключить микрофон</button></div>
+<p id="state" role="status">Подготовка аватара и модели речи…</p>
+<div id="signal"><meter id="level" min="0" max="1" value="0" aria-label="Уровень микрофона"></meter><span id="activity">Микрофон выключен</span></div>
+<label>Микрофон <select id="input"><option value="default">Системный микрофон</option></select></label>
+<label id="ownerRow" hidden><input type="checkbox" id="owner" checked> Открывать рот только на мой голос</label>
+<label><input type="checkbox" id="cable"> Передавать синхронный голос в CABLE Input</label>
+<p id="audio-note">В Zoom выберите микрофон <b>CABLE Output</b>. Обычный микрофон Zoom будет опережать изображение.</p>
+<details open><summary><b>Подключение к Zoom</b></summary><ol><li id="obsStep">В OBS добавьте указанный ниже адрес браузерного источника и запустите виртуальную камеру.</li><li>В Zoom: камера <b>OBS Virtual Camera</b>, микрофон <b>CABLE Output</b>.</li><li>Оставьте эту страницу открытой и включите микрофон кнопкой выше.</li></ol></details>
+<details><summary>Состояние аватара</summary><p id="obsSource">Источник OBS «Браузер»: <code id="url"></code>, размер 720 × 720.</p><pre id="stats"></pre><small>Пауза в речи не переключает лицо на другой кадр. Физическая камера не используется.</small></details>
+<iframe id="engine" src="/engine" title="Локальная модель артикуляции"></iframe><script src="/static/feed.js?native-size=1"></script><script src="/static/avatar_identity_live.js"></script></body></html>
